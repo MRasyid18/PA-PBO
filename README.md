@@ -1,6 +1,6 @@
 # 🏨 Grand Nusantara Hotel — Sistem Manajemen Pemesanan Kamar
 
-Aplikasi web full-stack untuk manajemen hotel dengan **Frontend HTML/CSS/JS** dan **Backend Java murni**.
+Website Sistem untuk manajemen pemesanan kamar hotel.
 
 ---
 
