@@ -9,15 +9,15 @@ Aplikasi web full-stack untuk manajemen hotel dengan **Frontend HTML/CSS/JS** da
 ```
 hotel-booking-app/
 │
-├── frontend/                     # Wilayah kerja Tim Frontend (2 Orang)
-│   ├── index.html                # Halaman utama (Dashboard + semua tab)
+├── frontend/
+│   ├── index.html                
 │   ├── css/
-│   │   └── style.css             # Desain & tata letak (Dark Luxury Theme)
+│   │   └── style.css             
 │   └── js/
 │       ├── api.js                # Fungsi Fetch/komunikasi dengan Backend Java
 │       └── ui.js                 # Manipulasi DOM (tabel, modal, alert)
 │
-└── backend/                      # Wilayah kerja Tim Backend (3 Orang)
+└── backend/
     └── src/
         ├── Main.java             # Entry point, HTTP Server lokal (port 8000)
         │
