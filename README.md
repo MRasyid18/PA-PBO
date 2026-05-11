@@ -1,10 +1,10 @@
-# 🏨 Grand Nusantara Hotel — Sistem Manajemen Pemesanan Kamar
+# Grand Nusantara Hotel — Sistem Manajemen Pemesanan Kamar
 
 Website Sistem untuk manajemen pemesanan kamar hotel.
 
 ---
 
-## 📁 Struktur Folder
+## Struktur Folder
 
 ```
 hotel-booking-app/
@@ -38,7 +38,7 @@ hotel-booking-app/
 
 ---
 
-## 🚀 Cara Menjalankan
+## Cara Menjalankan
 
 ### Langkah 1 — Jalankan Backend Java
 
@@ -72,7 +72,7 @@ Atau buka file `frontend/index.html` langsung di browser.
 
 ---
 
-## ✨ Fitur Aplikasi
+## Fitur Aplikasi
 
 ### Dashboard
 - Statistik: Total kamar, kamar tersedia, total pelanggan, total pemesanan
@@ -99,7 +99,7 @@ Atau buka file `frontend/index.html` langsung di browser.
 
 ---
 
-## 🎯 Penerapan Konsep
+## Penerapan Konsep
 
 | Konsep OOP | Implementasi |
 |------------|-------------|
@@ -112,7 +112,7 @@ Atau buka file `frontend/index.html` langsung di browser.
 
 ---
 
-## 🌐 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Deskripsi |
 |--------|----------|-----------|
@@ -149,13 +149,13 @@ Atau buka file `frontend/index.html` langsung di browser.
 
 ---
 
-## 🎨 Mode Demo
+## Mode Demo
 
 Jika backend Java **belum dijalankan**, frontend akan otomatis beralih ke **Mode Demo** dengan data lokal (simulasi). Semua operasi CRUD tetap berfungsi menggunakan `sessionStorage` browser.
 
 ---
 
-## 👥 Pembagian Tugas Tim
+## Pembagian Tugas Tim
 
 | Anggota | Fokus | File |
 |---------|-------|------|
