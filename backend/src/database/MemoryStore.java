@@ -1,54 +1,44 @@
 package database;
-
 import models.Booking;
 import models.Customer;
 import models.Room;
-
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * MemoryStore — Penerapan Java Collection sebagai pengganti database.
- * Menyimpan semua data dalam ArrayList selama program berjalan.
- * Menggunakan AtomicInteger untuk ID yang thread-safe.
- */
 public class MemoryStore {
 
-    // ── Java Collections (ArrayList) ─────────────────────────────────────────
-
+    // Java Collections (ArrayList)
     private static final ArrayList<Room>     rooms     = new ArrayList<>();
     private static final ArrayList<Customer> customers = new ArrayList<>();
     private static final ArrayList<Booking>  bookings  = new ArrayList<>();
 
-    // ── Auto-increment ID ────────────────────────────────────────────────────
-
+    // Auto-increment ID
     private static final AtomicInteger roomIdSeq     = new AtomicInteger(1);
     private static final AtomicInteger customerIdSeq = new AtomicInteger(1);
     private static final AtomicInteger bookingIdSeq  = new AtomicInteger(1);
 
-    // ── Seed Data ────────────────────────────────────────────────────────────
-
+    // Seed Data
     static {
-        // Isi data awal agar langsung ada data saat program dijalankan
+        // Data dummy
         rooms.add(new Room(roomIdSeq.getAndIncrement(), "101", "Standard",      500_000, "Tersedia"));
         rooms.add(new Room(roomIdSeq.getAndIncrement(), "201", "Deluxe",        850_000, "Dipesan"));
         rooms.add(new Room(roomIdSeq.getAndIncrement(), "301", "Suite",       1_500_000, "Tersedia"));
         rooms.add(new Room(roomIdSeq.getAndIncrement(), "401", "Presidential", 3_500_000, "Maintenance"));
         rooms.add(new Room(roomIdSeq.getAndIncrement(), "102", "Standard",      500_000, "Tersedia"));
 
-        customers.add(new Customer(customerIdSeq.getAndIncrement(), "Budi Santoso", "budi@email.com",  "081234567890", "Gold"));
-        customers.add(new Customer(customerIdSeq.getAndIncrement(), "Sari Dewi",    "sari@email.com",  "082345678901", "Platinum"));
-        customers.add(new Customer(customerIdSeq.getAndIncrement(), "Ahmad Fauzi",  "ahmad@email.com", "083456789012", "Regular"));
-        customers.add(new Customer(customerIdSeq.getAndIncrement(), "Rina Marlina", "rina@email.com",  "084567890123", "Silver"));
+        customers.add(new Customer(customerIdSeq.getAndIncrement(), "Rasyid", "mrasyid18@gmail.com",  "081345162892", "Gold"));
+        customers.add(new Customer(customerIdSeq.getAndIncrement(), "Zidan",    "zidan@gmail.com",  "082345678901", "Platinum"));
+        customers.add(new Customer(customerIdSeq.getAndIncrement(), "Andra",  "andra@gmail.com", "083456789012", "Regular"));
+        customers.add(new Customer(customerIdSeq.getAndIncrement(), "Angel", "angel@gmail.com",  "084567890123", "Silver"));
+        customers.add(new Customer(customerIdSeq.getAndIncrement(), "Renaya", "renaya@gmail.com",  "085678901234", "Regular"));
 
-        bookings.add(new Booking(bookingIdSeq.getAndIncrement(), 1, 2, "2025-07-10", "2025-07-13", 2_550_000, "Aktif"));
-        bookings.add(new Booking(bookingIdSeq.getAndIncrement(), 2, 3, "2025-07-08", "2025-07-09", 1_500_000, "Selesai"));
+        bookings.add(new Booking(bookingIdSeq.getAndIncrement(), 1, 1, "2026-07-10", "2026-07-11", 500_000, "Aktif"));
+        bookings.add(new Booking(bookingIdSeq.getAndIncrement(), 2, 2, "2026-05-08", "2026-05-09", 850_000, "Selesai"));
+        bookings.add(new Booking(bookingIdSeq.getAndIncrement(), 3, 3, "2026-10-04", "2026-11-05", 1_500_000, "Aktif"));
+        bookings.add(new Booking(bookingIdSeq.getAndIncrement(), 4, 4, "2026-06-03", "2026-06-04", 3_500_000, "Selesai"));
+        bookings.add(new Booking(bookingIdSeq.getAndIncrement(), 5, 5, "2026-02-02", "2026-02-03", 500_000, "Selesai"));
     }
-
-    // ════════════════════════════════════════════════
     //  ROOM CRUD
-    // ════════════════════════════════════════════════
-
     public static ArrayList<Room> getAllRooms() {
         return new ArrayList<>(rooms);
     }
@@ -80,10 +70,7 @@ public class MemoryStore {
         return rooms.removeIf(r -> r.getId() == id);
     }
 
-    // ════════════════════════════════════════════════
     //  CUSTOMER CRUD
-    // ════════════════════════════════════════════════
-
     public static ArrayList<Customer> getAllCustomers() {
         return new ArrayList<>(customers);
     }
@@ -115,24 +102,21 @@ public class MemoryStore {
         return customers.removeIf(c -> c.getId() == id);
     }
 
-    // ════════════════════════════════════════════════
     //  BOOKING CRUD
-    // ════════════════════════════════════════════════
-
     public static ArrayList<Booking> getAllBookings() {
         return new ArrayList<>(bookings);
     }
 
     public static Booking getBookingById(int id) {
         return bookings.stream()
-                       .filter(b -> b.getId() == id)
-                       .findFirst()
-                       .orElse(null);
+                    .filter(b -> b.getId() == id)
+                    .findFirst()
+                    .orElse(null);
     }
 
     public static Booking addBooking(int customerId, int roomId,
-                                     String checkIn, String checkOut,
-                                     long totalHarga, String status) {
+                                    String checkIn, String checkOut,
+                                    long totalHarga, String status) {
         Booking b = new Booking(bookingIdSeq.getAndIncrement(), customerId, roomId,
                                 checkIn, checkOut, totalHarga, status);
         bookings.add(b);

@@ -51,7 +51,7 @@ public class Main {
         System.out.println("╔══════════════════════════════════════════╗");
         System.out.println("║   Grand Nusantara Hotel — Backend API    ║");
         System.out.println("╠══════════════════════════════════════════╣");
-        System.out.println("║  Server berjalan di: http://localhost:" + PORT + " ║");
+        System.out.println("║  Server aktif di: http://localhost:" + PORT + "  ║");
         System.out.println("║                                          ║");
         System.out.println("║  Endpoint tersedia:                      ║");
         System.out.println("║  GET/POST   /api/rooms                   ║");

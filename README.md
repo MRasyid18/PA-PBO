@@ -1,23 +1,23 @@
-# 🏨 Grand Nusantara Hotel — Sistem Manajemen Pemesanan Kamar
+# Grand Nusantara Hotel — Sistem Manajemen Pemesanan Kamar
 
 Aplikasi web full-stack untuk manajemen hotel dengan **Frontend HTML/CSS/JS** dan **Backend Java murni**.
 
 ---
 
-## 📁 Struktur Folder
+## Struktur Folder
 
 ```
 hotel-booking-app/
 │
-├── frontend/                     # Wilayah kerja Tim Frontend (2 Orang)
+├── frontend/                     
 │   ├── index.html                # Halaman utama (Dashboard + semua tab)
 │   ├── css/
-│   │   └── style.css             # Desain & tata letak (Dark Luxury Theme)
+│   │   └── style.css             # Desain UI
 │   └── js/
 │       ├── api.js                # Fungsi Fetch/komunikasi dengan Backend Java
 │       └── ui.js                 # Manipulasi DOM (tabel, modal, alert)
 │
-└── backend/                      # Wilayah kerja Tim Backend (3 Orang)
+└── backend/                      
     └── src/
         ├── Main.java             # Entry point, HTTP Server lokal (port 8000)
         │
@@ -38,7 +38,7 @@ hotel-booking-app/
 
 ---
 
-## 🚀 Cara Menjalankan
+## Cara Menjalankan
 
 ### Langkah 1 — Jalankan Backend Java
 
@@ -60,7 +60,7 @@ java -cp out Main
 
 Server akan berjalan di `http://localhost:8000`
 
-> **Catatan VS Code:** Install ekstensi **Extension Pack for Java**, lalu buka `Main.java` dan klik tombol ▶ **Run** di atas method `main()`.
+> **Catatan VS Code:** Install ekstensi **Extension Pack for Java**, lalu buka `Main.java` dan klik tombol **Run** di atas method `main()`.
 
 ### Langkah 2 — Buka Frontend
 
@@ -72,7 +72,7 @@ Atau buka file `frontend/index.html` langsung di browser.
 
 ---
 
-## ✨ Fitur Aplikasi
+## Fitur Aplikasi
 
 ### Dashboard
 - Statistik: Total kamar, kamar tersedia, total pelanggan, total pemesanan
@@ -99,7 +99,7 @@ Atau buka file `frontend/index.html` langsung di browser.
 
 ---
 
-## 🎯 Penerapan Konsep
+## Penerapan Konsep
 
 | Konsep OOP | Implementasi |
 |------------|-------------|
@@ -112,7 +112,7 @@ Atau buka file `frontend/index.html` langsung di browser.
 
 ---
 
-## 🌐 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Deskripsi |
 |--------|----------|-----------|
@@ -149,13 +149,13 @@ Atau buka file `frontend/index.html` langsung di browser.
 
 ---
 
-## 🎨 Mode Demo
+## Mode Demo
 
 Jika backend Java **belum dijalankan**, frontend akan otomatis beralih ke **Mode Demo** dengan data lokal (simulasi). Semua operasi CRUD tetap berfungsi menggunakan `sessionStorage` browser.
 
 ---
 
-## 👥 Pembagian Tugas Tim
+## Pembagian Tugas Tim
 
 | Anggota | Fokus | File |
 |---------|-------|------|
