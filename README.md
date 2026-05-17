@@ -9,42 +9,39 @@ Website Sistem untuk manajemen pemesanan kamar hotel.
 ```
 hotel-booking-app/
 │
-<<<<<<< HEAD
 ├── frontend/                     
-│   ├── index.html                # Halaman utama (Dashboard + semua tab)
+│   ├── index.html                # Halaman UI utama (Dashboard, login overlay, & form)
 │   ├── css/
-│   │   └── style.css             # Desain UI
-=======
-├── frontend/
-│   ├── index.html                
-│   ├── css/
-│   │   └── style.css             
->>>>>>> 19b24ec529f102cd8c99db682dab246f3507695c
+│   │   └── style.css             # Desain UI modern, glassmorphism, & dekorasi warna
 │   └── js/
-│       ├── api.js                # Fungsi Fetch/komunikasi dengan Backend Java
-│       └── ui.js                 # Manipulasi DOM (tabel, modal, alert)
+│       ├── api.js                # Modul Fetch API / penghubung ke Backend Java & Mode Demo
+│       ├── auth.js               # Validasi sesi login admin (username/password)
+│       └── ui.js                 # Manipulasi DOM, render tabel, modal, dan kalkulator harga
 │
-<<<<<<< HEAD
 └── backend/                      
-=======
-└── backend/
->>>>>>> 19b24ec529f102cd8c99db682dab246f3507695c
-    └── src/
-        ├── Main.java             # Entry point, HTTP Server lokal (port 8000)
-        │
-        ├── models/               # OOP: Class, Inheritance, Abstraction
-        │   ├── Person.java       # Abstract class (Abstraction)
-        │   ├── Customer.java     # Extends Person (Inheritance)
-        │   ├── Room.java         # Class dengan Encapsulation penuh
-        │   └── Booking.java      # Agregasi Customer & Room
-        │
-        ├── database/             # Java Collection — pengganti database
-        │   └── MemoryStore.java  # ArrayList<Room>, <Customer>, <Booking>
-        │
-        └── controllers/          # REST API — Polymorphism
-            ├── RoomController.java
-            ├── CustomerController.java
-            └── BookingController.java
+    ├── src/                      # Source code utama program Java
+    │   ├── Main.java             # Entry point utama, registrasi HTTP Server (Port 8000)
+    │   │
+    │   ├── models/               # Penerapan struktur OOP (Class, Inheritance, Abstraction)
+    │   │   ├── Person.java       # Abstract class sebagai blueprint entitas manusia
+    │   │   ├── Customer.java     # Kelas turunan (subclass) dari Person
+    │   │   ├── Room.java         # Kelas enkapsulasi data kamar hotel
+    │   │   └── Booking.java      # Kelas agregasi antara Customer dan Room
+    │   │
+    │   ├── database/             # Pengganti DB lokal menggunakan Java Collections
+    │   │   └── MemoryStore.java  # Penyimpanan internal ArrayList data dummy & CRUD logic
+    │   │
+    │   └── controllers/          # Routing REST API endpoints (Polymorphism)
+    │       ├── RoomController.java
+    │       ├── CustomerController.java
+    │       └── BookingController.java
+    │
+    └── out/                      # FOLDER BARU (Generated)
+        │                         # Tempat file .class hasil kompilasi (bytecode)
+        ├── Main.class
+        ├── models/
+        ├── database/
+        └── controllers/
 ```
 
 ---
