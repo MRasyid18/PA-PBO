@@ -93,7 +93,7 @@ const DemoStore = {
     { id: 4, customerId: 4, roomId: 4, checkIn: '2026-06-03', checkOut: '2026-06-04', totalHarga: 3500000, status: 'Selesai'},
     { id: 5, customerId: 5, roomId: 5, checkIn: '2026-02-02', checkOut: '2026-02-03', totalHarga: 500000, status: 'Selesai'},
   ],
-  nextId: { rooms: 6, customers: 5, bookings: 3 },
+  nextId: { rooms: 6, customers: 6, bookings: 3 },
 };
 
 // Simpan demo data ke sessionStorage agar tidak hilang saat navigate antar tab
